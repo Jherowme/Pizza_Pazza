@@ -1,0 +1,73 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+ion-content {
+    --background: #70e670; /* Light Green */
+  }
+  
+  /* Button Styles */
+  ion-button {
+    --background: #ffcc00; /* Yellow */
+    --color: white; /* White text on yellow buttons */
+    --border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+  }
+  
+  /* Style for the radio button's picked and not picked states */
+  ion-radio {
+    --color-checked: black; /* Black when picked */
+    --color: white; /* White when not picked */
+  }
+  
+  /* Header Text for the App */
+  
+  
+  .app-header .pizza {
+    color: white; /* Pizza part in white */
+  }
+  
+  .app-header .pa {
+    color: green; /* Pa part in green */
+  }
+  
+  .app-header .zza {
+    color: red; /* zza part in red */
+  }
+
+  

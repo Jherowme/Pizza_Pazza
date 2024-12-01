@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ pizza?.name }}</ion-card-title>
+      <ion-card-subtitle>{{ pizza?.description }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="pizza?.image" alt="{{ pizza?.name }}" />
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Crust</ion-label>
+          <ion-label>{{ pizzaOptions.crust }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Size</ion-label>
+          <ion-label>{{ pizzaOptions.size }}</ion-label>
+        </ion-item>
+
+        <ion-item *ngIf="pizzaOptions.toppings.basil">
+          <ion-label>Basil</ion-label>
+        </ion-item>
+        <ion-item *ngIf="pizzaOptions.toppings.sausages">
+          <ion-label>Sausages</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div class="total-amount">
+        <ion-label>Total Amount: ${{ totalAmount.toFixed(2) }}</ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Payment Options -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Payment Options</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group [(ngModel)]="selectedPaymentOption">
+        <ion-item>
+          <ion-label>Cash on Delivery</ion-label>
+          <ion-radio slot="start" value="COD"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>GCash</ion-label>
+          <ion-radio slot="start" value="GCash"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="primary" (click)="confirmPayment()">
+    Confirm Payment
+  </ion-button>
+</ion-content>

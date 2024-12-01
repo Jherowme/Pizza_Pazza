@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="pizza">
+    <img [src]="pizza.image" alt="{{ pizza.name }}" />
+    <ion-card-header>
+      <ion-card-title>{{ pizza.name }}</ion-card-title>
+      <ion-card-subtitle>{{ pizza.description }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Price:</strong> ${{ pizza.price }}</p>
+      <p><strong>Crust:</strong> {{ pizzaOptions.crust }}</p>
+      <p><strong>Size:</strong> {{ pizzaOptions.size }}</p>
+      <p><strong>Toppings:</strong></p>
+      <ul>
+        <li *ngIf="pizzaOptions.toppings.basil">Basil</li>
+        <li *ngIf="pizzaOptions.toppings.sausages">Sausages</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="success" (click)="placeOrder()">
+    Place Order
+  </ion-button>
+</ion-content>

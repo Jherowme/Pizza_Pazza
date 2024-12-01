@@ -1,0 +1,23 @@
+<ion-content class="ion-padding">
+  <h1>Customize Your Pizza</h1>
+  <ion-item>
+    <ion-label>Crust</ion-label>
+    <ion-select [(ngModel)]="pizzaOptions.crust">
+      <ion-select-option value="toasted">Toasted</ion-select-option>
+      <ion-select-option value="soft">Soft</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Size</ion-label>
+    <ion-select [(ngModel)]="pizzaOptions.size">
+      <ion-select-option value="large">Large</ion-select-option>
+      <ion-select-option value="medium">Medium</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toppings</ion-label>
+    <ion-checkbox [(ngModel)]="pizzaOptions.toppings.basil">Basil</ion-checkbox>
+    <ion-checkbox [(ngModel)]="pizzaOptions.toppings.sausages">Sausages</ion-checkbox>
+  </ion-item>
+  <ion-button expand="block" (click)="proceedToCheckout()">Proceed</ion-button>
+</ion-content>

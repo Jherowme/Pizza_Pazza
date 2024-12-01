@@ -1,0 +1,21 @@
+ion-item {
+    --background: white;
+    --border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  ion-label {
+    font-size: 1.1rem;
+  }
+  
+  ion-radio {
+    --size: 20px;
+    --color: gray;
+  }
+
+  .pizza-image {
+    width: 100%;
+    max-width: 200px;  /* You can adjust this value to your desired width */
+    height: auto;      /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+  }

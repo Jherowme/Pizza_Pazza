@@ -1,0 +1,17 @@
+<ion-content class="ion-padding">
+  <h2>Login</h2>
+
+  <!-- Login Form -->
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="credentials.email" name="email" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="credentials.password" name="password" required></ion-input>
+  </ion-item>
+
+  <!-- Login Button -->
+  <ion-button expand="full" (click)="login()">Login</ion-button>
+</ion-content>

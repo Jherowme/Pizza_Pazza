@@ -1,0 +1,12 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  ion-button {
+    --background: #ffcc00; /* Yellow background */
+    --color: white; /* White text color */
+    --border-radius: 10px; /* Rounded corners */
+  }

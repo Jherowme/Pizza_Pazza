@@ -1,0 +1,7 @@
+{
+  "name": "Pizza_Pazza",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
